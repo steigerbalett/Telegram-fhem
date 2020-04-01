@@ -19,7 +19,7 @@
 #
 ##############################################################################
 #
-# $Id: 10_SOMFY.pm 59878 2020-03-29 15:22:00Z viegener $
+# $Id: 10_SOMFY.pm 61677 2020-04-01 14:38:00Z viegener $
 #  
 # SOMFY RTS / Simu Hz protocol module for FHEM
 # (c) Thomas Dankert <post@thomyd.de>
@@ -1155,8 +1155,7 @@ sub SOMFY_CalcCurrentPos {
 					$newPos = maxNum( 0, ($pos - $newPos) );
 				}
 			} else {
-				Log3($name,1,"SOMFY_CalcCurrentPos: $name move wrong $move - set to 4POS");
-						$newPos = $pos;
+				Log3($name,1,"SOMFY_CalcCurrentPos: $name move wrong $move");
 			}			
 		} else {
 			if($move eq 'on') {
@@ -1190,8 +1189,7 @@ sub SOMFY_CalcCurrentPos {
 					}
 				}
 			} else {
-				Log3($name,1,"SOMFY_CalcCurrentPos: $name move wrong $move - set to 4POS");
-						$newPos = $pos;
+				Log3($name,1,"SOMFY_CalcCurrentPos: $name move wrong $move");
 			}			
 		}
 	} else {
